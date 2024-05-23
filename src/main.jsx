@@ -14,6 +14,7 @@ import Contact from './Components/Contact';
 import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
 import Card from './Components/Card';
+import Order from './Components/Order';
 
 const router = createBrowserRouter([
   {
@@ -24,27 +25,34 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
+        loader:()=> fetch('http://localhost:5000/food')
       },
-    {
-      path:"/addFood",
-      element:<AddFood></AddFood>,
-    },
-    {
-      path:"/contact",
-      element:<Contact></Contact>,
-    },
-    {
-      path:'/signIn',
-      element:<SignIn></SignIn>,
-    },
-    {
-      path:'/signUp',
-      element:<SignUp></SignUp>,
-    },
-     {
-    path:'/card',
-    element:<Card></Card>,
-  }
+      {
+        path:"/addFood",
+        element:<AddFood></AddFood>,
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>,
+      },
+      {
+        path:'/signIn',
+        element:<SignIn></SignIn>,
+      },
+      {
+        path:'/signUp',
+        element:<SignUp></SignUp>,
+      },
+      {
+      path:'/card',
+      element:<Card></Card>,
+      loader:()=> fetch('http://localhost:5000/food'),
+      },
+      {
+      path:'/food/:id',
+      element:<Order></Order>,
+      loader: ({params})=> fetch(`http://localhost:5000/food/${params.id}`)
+      }
   ]
   },
  
