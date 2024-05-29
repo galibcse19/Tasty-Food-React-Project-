@@ -103,7 +103,7 @@ const AddFood = () => {
                             </div>
                              
                             <div className="mt-6">
-                                <input className="btn btn-block " type="submit" value="ADD FOOD" />
+                                <input className="btn btn-block hover:bg-white hover:text-black " type="submit" value="ADD FOOD" />
                             </div>
                     </form>    
                 </div>

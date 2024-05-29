@@ -18,7 +18,7 @@ const FoodCard = ({food}) => {
                         <p>Quantity:  {quantity}</p>
                         <p>Price: $ {price}</p>
                         <div className="card-actions">
-                        <Link to={`/food/${_id}`}><button className="btn btn-outline text-white w-40">Order Now</button></Link>
+                        <Link to={`/food/${_id}`}><button className="btn btn-outline text-white w-40 hover:bg-white">ORDER NOW</button></Link>
                         </div>
                     </div>
                 </div>

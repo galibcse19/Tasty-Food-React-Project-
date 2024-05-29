@@ -55,13 +55,13 @@ const Card = () => {
             </div>
              <div className="text-center my-10">
                 {/* <p className="pb-4">Current Page: {currentPage}</p> */}
-                <button onClick={handlePreviousPage} className="btn btn-outline mr-4">Prev</button>
+                <button onClick={handlePreviousPage} className="btn btn-outline hover:bg-white mr-4">Prev</button>
                 {
                     pages.map(page=><button 
                         onClick={()=> setCurrentPage(page)}
-                        key={page}  className={(currentPage === page && `bg-white btn btn-outline mr-4`) || `btn btn-outline mr-4`}>{page+1}</button>)
+                        key={page}  className={(currentPage === page && `bg-white btn btn-outline mr-4 hover:bg-white`) || `btn btn-outline mr-4 hover:bg-white`}>{page+1}</button>)
                 }
-                <button onClick={handleNextPage} className="btn btn-outline mr-4">Next</button>
+                <button onClick={handleNextPage} className="btn btn-outline hover:bg-white mr-4">Next</button>
                 <select value={itemsPerPage} onChange={handleItemsPerPage} className="w-10 h-12 rounded-md" name="" id="">
                     <option value="6">6</option>
                     <option value="9">9</option>

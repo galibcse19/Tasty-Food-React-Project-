@@ -46,11 +46,13 @@ const Contact = () => {
             />
           </div>
           <div>
-            <button className="btn btn-outline bg-emerald-950 text-white px-16 text-lg w-full">Submit</button>
+            <button className="btn btn-outline bg-emerald-950 hover:bg-white text-white px-16 text-lg w-full">Submit</button>
           </div>
         </form>
       </main>
- 
+      <div className=''>
+        <iframe className='w-full mx-auto h-screen' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.252593245769!2d89.12354317477649!3d23.233893608410195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff1857a2783a7f%3A0x4b39b71c8cc3df58!2sJashore%20University%20of%20Science%20and%20Technology%20Cafeteria!5e0!3m2!1sen!2sbd!4v1716562302120!5m2!1sen!2sbd"  allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>  
+      </div>
     </div>
   );
 };
